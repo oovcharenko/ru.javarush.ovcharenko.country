@@ -1,0 +1,5 @@
+package ru.javarush.ovcharenko.country;public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}
