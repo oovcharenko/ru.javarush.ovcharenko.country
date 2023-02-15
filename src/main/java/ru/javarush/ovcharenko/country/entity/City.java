@@ -1,27 +1,23 @@
 package ru.javarush.ovcharenko.country.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(schema = "world", name = "city")
+@Getter
 public class City {
     @Id
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "country_id")
-    private Integer country_id;
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    private Country country;
 
-    @Column(name = "distinct")
-    private String distinct;
+    private String district;
 
-    @Column(name = "population")
     private Integer population;
 
 
