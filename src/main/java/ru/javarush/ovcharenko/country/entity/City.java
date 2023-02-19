@@ -1,6 +1,7 @@
 package ru.javarush.ovcharenko.country.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 @Entity
 @Table(schema = "world", name = "city")
